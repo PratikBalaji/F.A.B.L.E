@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fable-backend"
+version = "0.1.0"
+description = "F.A.B.L.E Backend"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic",
+    "openai",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "pydantic-settings",
+    "structlog",
+    "sentence-transformers",
+    "faiss-cpu",
+    "numpy",
+    # Multi-user platform foundation
+    "supabase",
+    "httpx",
+    "pyjwt[crypto]",
+    "cryptography",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+]
